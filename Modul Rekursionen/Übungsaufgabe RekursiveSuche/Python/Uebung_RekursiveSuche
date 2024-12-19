@@ -1,0 +1,20 @@
+word_arr = ['cherry', 'house', 'banana', 'waterfall', 'island', 'lemon',
+              'flower', 'queen', 'elephant', 'river']
+
+def recursive_search(arr, target, start=0):
+    if arr[start] == target:
+        print(f'{target} is at index {start}')
+        return start
+    elif start == len(arr) - 1:
+        print('target not found')
+        return -1
+    else:
+        # print(arr[start])
+        recursive_search(arr, target, start+1)
+
+
+
+recursive_search(word_arr, 'island', )
+recursive_search(word_arr, 'river')
+recursive_search(word_arr, 'cherry')
+recursive_search(word_arr, 'cherry', 2)
